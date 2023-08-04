@@ -56,9 +56,9 @@ require([
     type: "simple", // autocasts as new SimpleRenderer()
     symbol: iconSymbol
   };
-  // Request feature layers and overwrite renderer 
+  // Request feature layers and overwrite renderer
   const featureLayerBrotes = new FeatureLayer({
-    url: "https://services-eu1.arcgis.com/WCEIifo5j3luTcRc/ArcGIS/rest/services/SARS_animals_OIE/FeatureServer/0",
+    url: "https://gis.inia.es/server/rest/services/CISA/brotes_SARS/MapServer/0",
     copyright: "Influenza Aviar",
     title: "Brotes",
     outFields: ['*'],
@@ -198,7 +198,7 @@ require([
 
   /// ESTA FUNCIÓN PROGRAMA EL POPUPTEMPLATE
   function getInfoComarcas(feature) {
-  
+
     /* view.graphics.removeAll() */
 
     var graphic, attributes;
@@ -210,7 +210,7 @@ require([
 
     var urlRutas = 'https://raw.githubusercontent.com/influenzaAviar/applicacionWeb3D/main/GeoJSON/rutasUsa.geojson';
     // Se inicia la peticion ajax a la url ruta
-    
+
     var request = new XMLHttpRequest();
     request.open("GET", urlRutas, false); // false for synchronous request
     request.send(null);
@@ -251,7 +251,7 @@ require([
       console.log("Remove")
     })
 
-    
+
   }
 
   // Create the Map
@@ -370,7 +370,7 @@ require([
 
   const timeSliderBrotes = new TimeSlider({
     container: "timeSliderBrotes",
-    // la propiedad "playRate" del widgetb es el tiempo (en milisegundos) entre los pasos de la animación. Este valor predeterminado es 1000. 
+    // la propiedad "playRate" del widgetb es el tiempo (en milisegundos) entre los pasos de la animación. Este valor predeterminado es 1000.
     playRate: 100,
     view: featureLayerBrotes,
     stops: {
