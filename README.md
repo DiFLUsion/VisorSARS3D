@@ -1,3 +1,2 @@
 # SarsCovidAnimals
-Sars Covid Animals
-https://carlos29blanco.github.io/SarsCovidAnimals/
+Sars Covid Animals :  https://diflusion.github.io/VisorSARS3D/
