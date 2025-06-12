@@ -35,7 +35,7 @@ require([
 
   // Request feature layers and overwrite renderer
   const featureLayerBrotes = new FeatureLayer({
-    url: "https://gis.inia.es/server/rest/services/CISA/brotes_SARS/MapServer/0",
+    url: "https://gis.inia.es/server/rest/services/CISA/outbreaks_SARS/MapServer/0",
     copyright: "CISA-INIA-CSIC",
     title: "Brotes",
     outFields: ['*'],
